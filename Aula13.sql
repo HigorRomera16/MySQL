@@ -58,23 +58,48 @@ insert into Funcionário (NomeF              ,Idade,Cidade                 ,Sal�
 			value       ('Roberto Carlos  ','40' ,'Santa Barbara D`Oeste','1440,5'),
 						('João Santos    ' ,'20' ,'Santa Barbara D`Oeste','1700,0'),
 				        ('Gabriel Pereira ','50' ,'Santa Barbara D`Oeste','2000,0');
-
-select NomeP, Doença 
-from hospital;
-
+-- A
 select *
-from hospital
-where nome = ""
+from Paciente
+where Doença = 'Síndrome de Usher';
 
+-- B
+select *
+from Médico
+where especialidade = "Ortopedia" 
+	and Idade > 40;
 
+-- C
+select *
+from Consulta
+where CRM_Médico NOT IN (46, 79);
 
-                   
-    
+-- D
+select *
+from Ambulatório
+where andar = 4
+	and capacidade = 50 or numeroA > 10;
 
-	
+-- E
+select nome, especialidade
+from Médico;
 
+-- F
+select numeroA
+from Ambulatório
+where andar = 3;
 
-    
-    
+-- G
+select RGP, dataT
+from Consulta
+where RGP in ("122","725");
 
-    
+-- H
+select numeroA
+from Ambulatório
+where andar not in (2, 4)
+	and capacidade > 50;
+
+-- I
+select nome
+from médico
