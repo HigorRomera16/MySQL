@@ -39,12 +39,12 @@ insert into Ambulatório (andar, capacidade)
 						('2º',  '6'),
 						('3º',  '8');
                         
-insert into Médico (Nome,              Idade,Cidade,                 Especialidade)
+insert into Médico (NomeM,              Idade,Cidade,                 Especialidade)
 			value  ('Dheyvison Soares','34' ,'Santa Barbara D`Oeste','Cardiologia'),
 				   ('Higor Romera' ,'55' ,'Santa Barbara D`Oeste','Ortopedia'),
 				   ('Gustavo Barreira','25' ,'Santa Barbara D`Oeste','Psiquiatria');
                    
-insert into Paciente (Nome              ,Idade,Cidade                 ,Doença)
+insert into Paciente (NomeP              ,Idade,Cidade                 ,Doença)
 			value    ('Higor Eduardo   ','63' ,'Santa Barbara D`Oeste','Pressão Alta'),
 				     ('João Ricardo   ' ,'80' ,'Santa Barbara D`Oeste','Síndrome de Usher'),
 				     ('Gabriel Roberto ','90' ,'Santa Barbara D`Oeste','Transtorno Obsessivo-compulsivo ');
@@ -54,10 +54,20 @@ insert into Consulta (RG            ,DataT                                 ,Hora
 				     ('84.443.934-9',STR_TO_DATE("11/04/1945", '%d/%m/%Y') ,'12:10'),
 				     ('54.567.342-1',STR_TO_DATE("27/12/1935", '%d/%m/%Y') ,'17:15');      
             
-insert into Funcionário (Nome              ,Idade,Cidade                 ,Salário)
+insert into Funcionário (NomeF              ,Idade,Cidade                 ,Salário)
 			value       ('Roberto Carlos  ','40' ,'Santa Barbara D`Oeste','1440,5'),
 						('João Santos    ' ,'20' ,'Santa Barbara D`Oeste','1700,0'),
 				        ('Gabriel Pereira ','50' ,'Santa Barbara D`Oeste','2000,0');
+
+select NomeP, Doença 
+from hospital;
+
+select *
+from hospital
+where nome = ""
+
+
+
                    
     
 
